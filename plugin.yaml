@@ -8,3 +8,12 @@ hooks:
   install: "$HELM_PLUGIN_DIR/install.sh"
   update: "$HELM_PLUGIN_DIR/update.sh"
   cleanup: "$HELM_PLUGIN_DIR/cleanup.sh"
+annotations:
+  artifacthub.io/category: integration-delivery
+  artifacthub.io/license: MIT
+  artifacthub.io/links: |
+    - name: source
+      url: https://github.com/fadedreams/helm-deploy-preview
+  artifacthub.io/maintainers: |
+    - name: fadedreams
+      email: fadedreams7@gmail.com
