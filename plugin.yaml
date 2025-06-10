@@ -1,0 +1,10 @@
+name: "deploy-preview"
+version: "0.1.0"
+usage: "Create a temporary preview environment for Helm chart deployment"
+description: "Deploys a Helm chart in an isolated namespace for testing, with automatic cleanup options."
+ignoreFlags: false
+command: "$HELM_PLUGIN_DIR/deploy-preview.sh"
+hooks:
+  install: "$HELM_PLUGIN_DIR/install.sh"
+  update: "$HELM_PLUGIN_DIR/update.sh"
+  cleanup: "$HELM_PLUGIN_DIR/cleanup.sh"
