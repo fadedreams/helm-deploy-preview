@@ -3,8 +3,6 @@
 ## Overview
 The `helm-deploy-preview` plugin creates a temporary, isolated preview environment for Helm chart deployments. It deploys your chart in a unique Kubernetes namespace, allows you to test changes (e.g., MySQL configurations, service ports), and automatically cleans up the environment after a set time or on manual command. This is ideal for testing updates without affecting production releases.
 
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/helm-deploy-preview)](https://artifacthub.io/packages/search?repo=helm-deploy-preview)
-
 ## Features
 - Automatically generates a unique namespace (e.g., `preview-YYYYMMDD-HHMM`) based on the current timestamp.
 - Deploys the chart with a unique release name to avoid conflicts.

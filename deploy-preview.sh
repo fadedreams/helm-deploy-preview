@@ -4,7 +4,10 @@
 TIMESTAMP=$(date +%Y%m%d-%H%M)
 NAMESPACE="preview-${TIMESTAMP}"
 CHART_PATH=$1
-VALUES="--values values.yaml"
+VALUES=""
+if [ -f "values.yaml" ]; then
+    VALUES="--values values.yaml"
+fi
 
 # Create namespace
 kubectl create namespace $NAMESPACE
