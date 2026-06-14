@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "deploy-preview updated to version 0.1.0"
+PLUGIN_VERSION=$(grep '^version:' "$HELM_PLUGIN_DIR/plugin.yaml" | awk '{print $2}' | tr -d '"')
+echo "deploy-preview updated to version ${PLUGIN_VERSION}"

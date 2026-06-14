@@ -1,13 +1,12 @@
 name: "deploy-preview"
-version: "0.1.0"
+version: "0.1.1"
 usage: "Create a temporary preview environment for Helm chart deployment"
-description: "Deploys a Helm chart in an isolated namespace for testing, with automatic cleanup options."
+description: "Deploys a Helm chart in an isolated namespace for testing, with automatic cleanup. Supports subcommands: deploy (default) and cleanup."
 ignoreFlags: false
 command: "$HELM_PLUGIN_DIR/deploy-preview.sh"
 hooks:
   install: "$HELM_PLUGIN_DIR/install.sh"
   update: "$HELM_PLUGIN_DIR/update.sh"
-  cleanup: "$HELM_PLUGIN_DIR/cleanup.sh"
 annotations:
   artifacthub.io/category: integration-delivery
   artifacthub.io/license: MIT
