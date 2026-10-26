@@ -1,0 +1,57 @@
+# Helm-specific ignores
+*.tgz
+charts/
+Chart.lock
+tmpcharts/
+tmp/
+
+# Dependency directories
+vendor/
+node_modules/
+
+# Build and packaging artifacts
+dist/
+build/
+*.tar.gz
+*.zip
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Testing and coverage
+*.log
+*.log.*
+coverage/
+test-results/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Specific files mentioned
+all.txt
+all_dir.txt
+all_files.txt
+all_exc.txt
+all_ext.txt
+all_ext_X.txt
+tree.txt
+
+# Miscellaneous
+*.bak
+*.swp
+*.tmp
+temp/
+*.lock
+
