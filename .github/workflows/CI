@@ -1,0 +1,20 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ShellCheck
+        run: shellcheck -S warning ./*.sh
+
+      - name: Validate YAML files
+        run: |
+          yq e '.' plugin.yaml > /dev/null
+          yq e '.' artifacthub-repo.yml > /dev/null
